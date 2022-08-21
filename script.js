@@ -63,8 +63,16 @@ btnChangeGrid.addEventListener('mouseleave', function () { this.classList.remove
 btnRefresh.addEventListener('mouseenter', function () { this.classList.add('hover-style') });
 btnRefresh.addEventListener('mouseleave', function () { this.classList.remove('hover-style') });
 
+btnChangeGrid.addEventListener('mousedown', function () { this.classList.add('click-style') });
+btnChangeGrid.addEventListener('mouseup', openPopUp);
 btnRefresh.addEventListener('mousedown', function () { this.classList.add('click-style') });
 btnRefresh.addEventListener('mouseup', refreshGrid);
+
+function openPopUp() {
+    this.classList.remove('click-style');
+
+    popup.classList.add('opened-popup');
+}
 
 function refreshGrid() {
     this.classList.remove('click-style');
