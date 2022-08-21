@@ -214,4 +214,11 @@ button {
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
 
     box-shadow: 0px 5px 10px #263c26;
+
+    transition: all 0.1s;
+}
+
+.hover-style {
+    box-shadow: 0px 15px 25px -5px #263c26;
+    transform: scale(1.03);
 }
