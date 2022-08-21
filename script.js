@@ -62,3 +62,15 @@ btnChangeGrid.addEventListener('mouseenter', function () { this.classList.add('h
 btnChangeGrid.addEventListener('mouseleave', function () { this.classList.remove('hover-style') });
 btnRefresh.addEventListener('mouseenter', function () { this.classList.add('hover-style') });
 btnRefresh.addEventListener('mouseleave', function () { this.classList.remove('hover-style') });
+
+btnRefresh.addEventListener('mousedown', function () { this.classList.add('click-style') });
+btnRefresh.addEventListener('mouseup', refreshGrid);
+
+function refreshGrid() {
+    this.classList.remove('click-style');
+
+    const squares = document.querySelectorAll('#screen div div');
+    squares.forEach(element => element.style.backgroundColor = null);
+
+    changeSquareColor();
+}
