@@ -58,10 +58,16 @@ changeSquareColor();
 
 const btnChangeGrid = document.getElementById('change-grid');
 const btnRefresh = document.getElementById('refresh');
+const popup = document.querySelector('#popup');
+const btnsPopUp = document.querySelectorAll('#popup button');
 btnChangeGrid.addEventListener('mouseenter', function () { this.classList.add('hover-style') });
 btnChangeGrid.addEventListener('mouseleave', function () { this.classList.remove('hover-style') });
 btnRefresh.addEventListener('mouseenter', function () { this.classList.add('hover-style') });
 btnRefresh.addEventListener('mouseleave', function () { this.classList.remove('hover-style') });
+btnsPopUp.forEach(function (element) {
+    element.addEventListener('mouseenter', function () { this.classList.add('hover-style') });
+    element.addEventListener('mouseleave', function () { this.classList.remove('hover-style') });
+});
 
 btnChangeGrid.addEventListener('mousedown', function () { this.classList.add('click-style') });
 btnChangeGrid.addEventListener('mouseup', openPopUp);
