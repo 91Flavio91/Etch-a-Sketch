@@ -20,3 +20,29 @@ function makeGrid(a, b) {
 }
 
 makeGrid(30, 50);
+
+
+
+
+function changeSquareColor() {
+
+    const squares = document.querySelectorAll('#screen div div');
+    squares.forEach(function (element) {
+        element.addEventListener('mouseenter', changeColor);
+        element.addEventListener('mouseleave', function() { this.removeEventListener('mouseenter', changeColor) });
+    })
+};
+
+function changeColor() {
+    this.style.backgroundColor = randomColor();
+}
+
+function randomColor() {
+    return `rgb(${randomValue()}, ${randomValue()}, ${randomValue()})`;
+}
+
+function randomValue() {
+    return Math.floor(Math.random() * 256);
+}
+
+changeSquareColor();
