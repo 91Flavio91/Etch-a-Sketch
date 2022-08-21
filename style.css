@@ -222,3 +222,8 @@ button {
     box-shadow: 0px 15px 25px -5px #263c26;
     transform: scale(1.03);
 }
+
+.click-style {
+    box-shadow: 0px 4px 8px #263c26;
+    transform: scale(.98);
+}
