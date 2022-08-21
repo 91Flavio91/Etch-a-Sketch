@@ -249,4 +249,11 @@ button {
     box-shadow: inset 0px 0px 15px #263c26;
 
     background-color: #72c077;
+
+    transition: all 0.2s;
+}
+
+#popup.opened-popup {
+    transform: scale(1);
+    visibility: visible;
 }
