@@ -46,3 +46,19 @@ function randomValue() {
 }
 
 changeSquareColor();
+
+
+
+
+
+
+
+
+
+
+const btnChangeGrid = document.getElementById('change-grid');
+const btnRefresh = document.getElementById('refresh');
+btnChangeGrid.addEventListener('mouseenter', function () { this.classList.add('hover-style') });
+btnChangeGrid.addEventListener('mouseleave', function () { this.classList.remove('hover-style') });
+btnRefresh.addEventListener('mouseenter', function () { this.classList.add('hover-style') });
+btnRefresh.addEventListener('mouseleave', function () { this.classList.remove('hover-style') });
