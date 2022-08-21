@@ -227,3 +227,26 @@ button {
     box-shadow: 0px 4px 8px #263c26;
     transform: scale(.98);
 }
+
+
+
+
+
+
+
+
+#popup {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    transform: scale(0.001);
+    visibility: hidden;
+    height: 300px;
+    width: 840px;
+    border: 1px solid;
+    border-radius: 40px;
+    box-shadow: inset 0px 0px 15px #263c26;
+
+    background-color: #72c077;
+}
