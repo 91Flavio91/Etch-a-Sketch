@@ -123,4 +123,7 @@ function changeGrid() {
         makeGrid(60, 100);
         changeSquareColor();
     }
+
+    popup.classList.remove('opened-popup');
+
 }
