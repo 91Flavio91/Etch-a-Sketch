@@ -47,6 +47,18 @@ function randomValue() {
 
 changeSquareColor();
 
+function removeGrid() {
+    const screen = document.getElementById('screen');
+    const screenNodes = screen.childNodes;
+
+    for (i = screenNodes.length - 1; i >= 0; i--) {
+        if (screenNodes[i].nodeName === "SPAN") {
+            continue;
+        }
+        screen.removeChild(screenNodes[i]);
+    }
+};
+
 
 
 
@@ -73,6 +85,10 @@ btnChangeGrid.addEventListener('mousedown', function () { this.classList.add('cl
 btnChangeGrid.addEventListener('mouseup', openPopUp);
 btnRefresh.addEventListener('mousedown', function () { this.classList.add('click-style') });
 btnRefresh.addEventListener('mouseup', refreshGrid);
+btnsPopUp.forEach(function (element) {
+    element.addEventListener('mousedown', function () { this.classList.add('click-style') });
+    element.addEventListener('mouseup', changeGrid);
+});
 
 function openPopUp() {
     this.classList.remove('click-style');
@@ -87,4 +103,24 @@ function refreshGrid() {
     squares.forEach(element => element.style.backgroundColor = null);
 
     changeSquareColor();
+}
+
+function changeGrid() {
+    this.classList.remove('click-style');
+
+    if (this === btnsPopUp[0]) {
+        removeGrid();
+        makeGrid(15, 25);
+        changeSquareColor();
+    }
+    else if (this === btnsPopUp[1]) {
+        removeGrid();
+        makeGrid(30, 50);
+        changeSquareColor();
+    }
+    else if (this === btnsPopUp[2]) {
+        removeGrid();
+        makeGrid(60, 100);
+        changeSquareColor();
+    }
 }
