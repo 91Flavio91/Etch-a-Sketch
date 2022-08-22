@@ -68,6 +68,10 @@ function removeGrid() {
 
 
 
+const container = document.getElementById('container')
+const backdrop = document.createElement('div');
+backdrop.setAttribute('id', 'backdrop');
+
 const btnChangeGrid = document.getElementById('change-grid');
 const btnRefresh = document.getElementById('refresh');
 const popup = document.querySelector('#popup');
@@ -94,6 +98,8 @@ function openPopUp() {
     this.classList.remove('click-style');
 
     popup.classList.add('opened-popup');
+
+    container.insertBefore(backdrop, popup);
 }
 
 function refreshGrid() {
@@ -126,4 +132,5 @@ function changeGrid() {
 
     popup.classList.remove('opened-popup');
 
+    container.removeChild(backdrop);
 }
